@@ -1,0 +1,183 @@
+/* Custom properties for easy color management */
+:root {
+    --bg-color: #e3f2fd;       /* Very soft, pastel light blue background */
+    --card-color: #ffffff;     /* Crisp white for content areas */
+    --primary-blue: #64b5f6;   /* Main bubbly blue */
+    --dark-blue: #1e88e5;      /* Deeper blue for text and hover accents */
+    --text-color: #455a64;     /* Soft dark gray for readable text */
+    --font-family: 'Fredoka', sans-serif; /* Super rounded, bubbly font */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--card-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 8px 24px rgba(100, 181, 246, 0.15);
+    border-radius: 0 0 24px 24px;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 50px; /* Makes it completely pill-shaped/bubbly */
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--bg-color);
+    color: var(--dark-blue);
+}
+
+/* Main layouts */
+main {
+    flex: 1;
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--card-color);
+    padding: 40px;
+    border-radius: 30px; /* Extra soft rounded corners */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* Bubbly Buttons */
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px; /* Bubbly shape */
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 16px rgba(100, 181, 246, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Slight bounce up effect */
+    box-shadow: 0 8px 20px rgba(100, 181, 246, 0.4);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #bbdefb;
+    color: var(--dark-blue);
+}
+
+/* Feature Cards & Grid */
+.features, .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card, .stat-card {
+    background-color: var(--card-color);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+.card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Stats Styles */
+h2 {
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #90a4ae;
+}
